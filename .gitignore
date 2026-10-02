@@ -1,0 +1,16 @@
+.DS_Store
+/output/
+/evolveworld_nips/
+*.tex
+*.bib
+*.sty
+*.bst
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.pdf
