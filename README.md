@@ -20,6 +20,8 @@
 
 <p><strong>Observe motion. Evolve scene state. Control the future.</strong></p>
 
+<p><a href="https://brack-wang.github.io/kepler4d/">Project Page</a></p>
+
 <img src="assets/teaser.png" alt="Kepler4D examples of automatic future evolution, language-guided trajectory editing, and generation under different camera viewpoints" width="100%">
 
 </div>

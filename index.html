@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fa">
+  <meta name="description" content="Kepler4D generates controllable future videos through explicit 4D scene state evolution, editable object trajectories, and geometric guidance.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kepler4D: Controllable Future Video Generation via 4D Scene State Evolution">
+  <meta property="og:description" content="Observe motion, evolve scene state, and control the future. Explore Kepler4D's method and visual results.">
+  <meta property="og:url" content="https://brack-wang.github.io/kepler4d/">
+  <meta property="og:image" content="https://brack-wang.github.io/kepler4d/assets/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Kepler4D: Controllable Future Video Generation via 4D Scene State Evolution</title>
+  <link rel="canonical" href="https://brack-wang.github.io/kepler4d/">
+  <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="static/css/fonts.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="static/js/main.js" defer></script>
+</head>
+<body>
+  <div class="page-background" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-container container">
+      <a class="logo" href="#top" aria-label="Kepler4D home">
+        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" aria-hidden="true"><ellipse cx="18" cy="18" rx="15" ry="7" transform="rotate(-35 18 18)" stroke="currentColor" stroke-width="1.7"/><ellipse cx="18" cy="18" rx="15" ry="7" transform="rotate(35 18 18)" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="18" r="3" fill="currentColor"/><circle cx="30" cy="10" r="2.5" fill="#d19330"/></svg>
+        <span>Kepler4D</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#citation">Cite</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="project-title">
+      <h1 id="project-title"><span class="brand">Kepler4D</span><span class="title-rest">: Controllable Future Video<br> Generation via 4D Scene State Evolution</span></h1>
+      <div class="authors">
+        <span class="author"><a href="https://openreview.net/profile?id=~Feiran_Wang2">Feiran Wang</a><sup>1</sup></span>
+        <span class="author"><a href="https://openreview.net/profile?id=~Bin_Duan1">Bin Duan</a><sup>2</sup></span>
+        <span class="author"><a href="https://openreview.net/profile?id=~Junyi_Wu1">Junyi Wu</a><sup>1</sup></span>
+        <span class="author"><a href="https://openreview.net/profile?id=~Gaowen_Liu4">Gaowen Liu</a><sup>3</sup></span>
+        <span class="author"><a href="https://openreview.net/profile?id=~Yan_Yan6">Yan Yan</a><sup>1,†</sup></span>
+      </div>
+      <div class="affiliations">
+        <span><sup>1</sup> University of Illinois at Chicago</span>
+        <span><sup>2</sup> University of Michigan Ann Arbor</span>
+        <span><sup>3</sup> Cisco</span>
+      </div>
+      <p class="corresponding">† Corresponding author</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/Brack-Wang/kepler4d">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 20c-4 1-4-2-5-3m14 5v-3.5c0-1-.3-1.7-.8-2.2 3.1-.3 5.8-1.5 5.8-6.1a4.8 4.8 0 0 0-1.3-3.3 4.5 4.5 0 0 0-.1-3.3s-1.1-.3-3.6 1.3a12 12 0 0 0-6 0C8.5 2.3 7.4 2.6 7.4 2.6a4.5 4.5 0 0 0-.1 3.3A4.8 4.8 0 0 0 6 9.2c0 4.6 2.7 5.8 5.8 6.1-.5.5-.8 1.2-.8 2.2V22"/></svg>
+          GitHub
+        </a>
+        <a class="button secondary" href="#results">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m3 16 5-5 5 5 3-3 5 5"/><circle cx="16" cy="8" r="1.5"/></svg>
+          Explore results
+        </a>
+        <a class="button secondary" href="#citation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h6v8H5c0 3 2 4 4 4v2c-4 0-6-2-6-6V6a1 1 0 0 1 1-1Zm12 0h6v8h-5c0 3 2 4 4 4v2c-4 0-6-2-6-6V6a1 1 0 0 1 1-1Z"/></svg>
+          BibTeX
+        </a>
+      </div>
+      <p class="hero-summary"><strong>TL;DR</strong> From an observed video to editable 3D trajectories: evolve an explicit 4D scene state to guide controllable future video generation.</p>
+    </section>
+
+    <section class="teaser section container" aria-label="Kepler4D at a glance">
+      <figure class="figure-card">
+        <button class="figure-zoom" type="button" aria-label="Enlarge Kepler4D overview" data-figure-title="Kepler4D at a glance">
+          <picture><source srcset="assets/teaser.webp" type="image/webp"><img src="assets/teaser.png" width="2400" height="1273" fetchpriority="high" alt="Car and camel examples showing observed inputs, reconstructed 4D scene states, automatic evolution, language-guided edits, and generated frames under different viewpoints."></picture>
+        </button>
+        <figcaption><strong>Observe motion. Evolve scene state. Control the future.</strong> A shared scene representation supports automatic future evolution, language-guided trajectory editing, and generation under different camera viewpoints.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-heading"><h2 id="abstract-title">Abstract</h2></div>
+      <div class="abstract-card">
+        <p>Video world models aim to preserve scene structure and predict how dynamic objects evolve beyond visual observations. We present <strong>Kepler4D</strong>, a framework for future video generation through explicit <strong>4D scene state evolution</strong>. Given a monocular video, Kepler4D constructs a shared 3D representation of background geometry, object motion histories, coarse spatial supports, and semantic context. <strong>Chain-of-Motion</strong> summarizes observed motion and uses a vision-language model to select structured speed and heading decisions and decide whether to bound object-center height from below. A deterministic rollout converts these decisions into future object trajectories for inspection and editing before synthesis. We render the evolving proxies into geometric controls for a pretrained video generator, separating coarse object motion from the synthesis of appearance and articulation. Experiments on real-world videos demonstrate that Kepler4D enables controllable object motion and plausible future rollout while preserving scene consistency.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="method" aria-labelledby="method-title">
+      <div class="section-heading">
+        <h2 id="method-title">From scene state to future video</h2>
+        <p class="section-lead">Make future object motion explicit, inspectable, and editable before synthesis.</p>
+      </div>
+      <figure class="figure-card">
+        <button class="figure-zoom" type="button" aria-label="Enlarge the Kepler4D method diagram" data-figure-title="Kepler4D method overview">
+          <picture><source srcset="assets/method.webp" type="image/webp"><img src="assets/method.png" width="2400" height="794" loading="lazy" decoding="async" alt="The Kepler4D pipeline constructs a scene state, infers structured motion decisions with Chain-of-Motion, rolls out future 3D trajectories, and renders controls for a pretrained video generator."></picture>
+        </button>
+        <figcaption><strong>Pipeline overview.</strong> Background geometry anchors the scene, while evolving object proxies provide foreground motion guidance. The video generator synthesizes appearance and local articulation.</figcaption>
+      </figure>
+      <div class="method-steps">
+        <article class="step"><span class="step-number">01</span><h3>Construct the scene state</h3><p>Organize static geometry, observed 3D object trajectories, coarse spatial supports, and semantic context in a shared world frame.</p></article>
+        <article class="step"><span class="step-number">02</span><h3>Evolve object motion</h3><p>Chain-of-Motion infers structured motion decisions. Deterministic rollout expands them into future trajectories for inspection and editing.</p></article>
+        <article class="step"><span class="step-number">03</span><h3>Render and generate</h3><p>Render depth, object control signals, and masks under a target camera path to guide a pretrained video generator.</p></article>
+      </div>
+    </section>
+
+    <section class="section container" id="results" aria-labelledby="results-title">
+      <div class="section-heading">
+        <h2 id="results-title">One scene state, different futures</h2>
+        <p class="section-lead">Explore automatic continuation, language-guided motion, and novel viewpoints.</p>
+      </div>
+      <div class="results-tabs" role="tablist" aria-label="Result type" hidden>
+        <button id="tab-automatic" type="button" role="tab" aria-selected="true" aria-controls="result-automatic" tabindex="0">Automatic evolution</button>
+        <button id="tab-editing" type="button" role="tab" aria-selected="false" aria-controls="result-editing" tabindex="-1">Language-guided editing</button>
+        <button id="tab-viewpoint" type="button" role="tab" aria-selected="false" aria-controls="result-viewpoint" tabindex="-1">Novel view synthesis</button>
+      </div>
+      <div class="result-panel" id="result-automatic" role="tabpanel" aria-labelledby="tab-automatic" tabindex="0">
+        <p class="panel-intro">Predict future object motion from the observed video and scene context.</p>
+        <figure class="figure-card">
+          <button class="figure-zoom" type="button" aria-label="Enlarge automatic evolution results" data-figure-title="Automatic future evolution">
+            <picture><source srcset="assets/automatic-evolution.webp" type="image/webp"><img src="assets/automatic-evolution.png" width="2400" height="1297" loading="lazy" decoding="async" alt="Frame sequences compare automatic future evolution for a runner vaulting over a railing, including the reference, Kepler4D, TrajectoryCrafter, SPMem, and VerseCrafter."></picture>
+          </button>
+          <figcaption><strong>Automatic future evolution.</strong> All methods use the observed video without externally supplied object trajectories or motion commands; methods with camera control receive the same target camera path. In this example, Kepler4D depicts the runner moving forward and vaulting over the railing, as in the reference.</figcaption>
+        </figure>
+      </div>
+      <div class="result-panel" id="result-editing" role="tabpanel" aria-labelledby="tab-editing" tabindex="0">
+        <p class="panel-intro">Use language to specify how an object should move before generating the future frames.</p>
+        <figure class="figure-card">
+          <button class="figure-zoom" type="button" aria-label="Enlarge language-guided generation results" data-figure-title="Language-guided trajectory editing">
+            <picture><source srcset="assets/language-guided-generation.webp" type="image/webp"><img src="assets/language-guided-generation.png" width="2400" height="785" loading="lazy" decoding="async" alt="Go Straight, Turn Left 60 degrees, and Turn Left 90 degrees instructions, inferred car trajectories, and generated results from Kepler4D, Wan Inpaint, and SPMem."></picture>
+          </button>
+          <figcaption><strong>Different instructions, different trajectories.</strong> “Go Straight,” “Turn Left 60°,” and “Turn Left 90°” specify alternative futures for the same observed video. The second column shows the inferred object trajectories.</figcaption>
+        </figure>
+        <p class="figure-note">Comparison methods receive the same language command. Kepler4D additionally uses its inferred trajectories and rendered geometric controls.</p>
+      </div>
+      <div class="result-panel" id="result-viewpoint" role="tabpanel" aria-labelledby="tab-viewpoint" tabindex="0">
+        <p class="panel-intro">Render the reconstructed scene from a target camera path.</p>
+        <figure class="figure-card">
+          <button class="figure-zoom" type="button" aria-label="Enlarge novel view synthesis results" data-figure-title="Static novel view synthesis">
+            <picture><source srcset="assets/novel-view-synthesis.webp" type="image/webp"><img src="assets/novel-view-synthesis.png" width="2400" height="1130" loading="lazy" decoding="async" alt="Indoor and outdoor novel view synthesis examples on DL3DV, comparing input views, target camera paths, reference views, Kepler4D, GEN3C, TrajectoryCrafter, and SPMem."></picture>
+          </button>
+          <figcaption><strong>Static novel view synthesis on DL3DV.</strong> We compare Kepler4D with GEN3C, TrajectoryCrafter, and SPMem under target camera motion. Each row shows the input view, target camera path, held-out reference view, and generated results.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section container" id="citation" aria-labelledby="citation-title">
+      <div class="section-heading"><h2 id="citation-title">BibTeX</h2><p class="section-lead">If you find this work useful, please consider citing it.</p></div>
+      <div class="citation-card">
+        <div class="citation-toolbar"><span>Kepler4D</span><button class="copy-button" type="button" id="copy-citation" hidden><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3"/></svg><span>Copy BibTeX</span></button></div>
+        <pre><code id="bibtex">@misc{wang2026kepler4d,
+  title={{Kepler4D}: Controllable Future Video Generation via 4D Scene State Evolution},
+  author={Wang, Feiran and Duan, Bin and Wu, Junyi and Liu, Gaowen and Yan, Yan},
+  year={2026},
+  url={https://github.com/Brack-Wang/kepler4d}
+}</code></pre>
+        <p id="copy-status" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container"><p>Kepler4D · 2026</p><a href="https://github.com/Brack-Wang/kepler4d">Project repository ↗</a></footer>
+
+  <dialog class="image-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-toolbar"><p id="dialog-title">Figure</p><button class="close-dialog" type="button" aria-label="Close enlarged figure"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+    <div class="dialog-image-wrap"><img alt=""></div>
+  </dialog>
+</body>
+</html>
