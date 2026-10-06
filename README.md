@@ -3,6 +3,10 @@
 <h2>Kepler4D: Controllable Future Video Generation<br>via 4D Scene State Evolution</h2>
 
 <p>
+  <a href="https://arxiv.org/pdf/2610.04152"><img src="https://img.shields.io/badge/Paper-arXiv%3A2610.04152-B31B1B?logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
+</p>
+
+<p>
   <a href="https://openreview.net/profile?id=~Feiran_Wang2">Feiran Wang</a><sup>1</sup>,
   <a href="https://openreview.net/profile?id=~Bin_Duan1">Bin Duan</a><sup>2</sup>,
   <a href="https://openreview.net/profile?id=~Junyi_Wu1">Junyi Wu</a><sup>1</sup>,
