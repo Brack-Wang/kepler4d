@@ -8,11 +8,11 @@
 </p>
 
 <p>
-  <a href="https://openreview.net/profile?id=~Feiran_Wang2">Feiran Wang</a><sup>1</sup>,
-  <a href="https://openreview.net/profile?id=~Bin_Duan1">Bin Duan</a><sup>2</sup>,
-  <a href="https://openreview.net/profile?id=~Junyi_Wu1">Junyi Wu</a><sup>1</sup>,
-  <a href="https://openreview.net/profile?id=~Gaowen_Liu4">Gaowen Liu</a><sup>3</sup>,
-  <a href="https://openreview.net/profile?id=~Yan_Yan6">Yan Yan</a><sup>1,†</sup>
+  <a href="https://brack-wang.github.io/">Feiran Wang</a><sup>1</sup>,
+  <a href="https://tuffr5.github.io/">Bin Duan</a><sup>2</sup>,
+  <a href="https://adreamwu.github.io/">Junyi Wu</a><sup>1</sup>,
+  <a href="https://scholar.google.com/citations?user=NIv_aeQAAAAJ&amp;hl=en">Gaowen Liu</a><sup>3</sup>,
+  <a href="https://tomyan555.github.io/">Yan Yan</a><sup>1,†</sup>
 </p>
 
 <p>
