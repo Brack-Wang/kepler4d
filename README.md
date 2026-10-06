@@ -4,6 +4,7 @@
 
 <p>
   <a href="https://arxiv.org/pdf/2610.04152"><img src="https://img.shields.io/badge/Paper-arXiv%3A2610.04152-B31B1B?logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
+  <a href="https://brack-wang.github.io/kepler4d/"><img src="https://img.shields.io/badge/Project-Page-1E5148?logo=github&amp;logoColor=white" alt="Project Page"></a>
 </p>
 
 <p>
@@ -23,8 +24,6 @@
 </p>
 
 <p><strong>Observe motion. Evolve scene state. Control the future.</strong></p>
-
-<p><a href="https://brack-wang.github.io/kepler4d/">Project Page</a></p>
 
 <img src="assets/teaser.png" alt="Kepler4D examples of automatic future evolution, language-guided trajectory editing, and generation under different camera viewpoints" width="100%">
 
